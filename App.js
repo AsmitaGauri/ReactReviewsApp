@@ -1,10 +1,44 @@
 
-import React from 'react';
+import React,{useState} from 'react';
 
 import Home from './screens/home';
-export default function App() {
-  return (
-    <Home/>
-  );
+import {StyleSheet} from 'react-native'
+import AppLoading from 'expo-app-loading'
+import * as Font from 'expo-font'
+
+const getFonts=()=>{
+    return Font.loadAsync({
+        'raleway-variable':require('./assets/fonts/Raleway-VariableFont_wght.ttf'),
+        'raleway-italic-variable':require('./assets/fonts/Raleway-Italic-VariableFont_wght.ttf')
+    });
 }
 
+// since this function loads asynchrously below code might execute before the font is fetched
+// hence we need to make sure that we render home only when fonts are fetched
+
+export default function App() {
+
+  const [fontsLoaded, setfontsLoaded] = useState(false);
+    
+    if(fontsLoaded){
+        return(
+           
+                <Home/>
+        
+        );
+    }else{
+        return(
+            <AppLoading
+             startAsync={getFonts}
+             onFinish={()=>setfontsLoaded(true)}
+             onError={console.error}
+            />
+        );
+    }
+}
+
+const styles=StyleSheet.create({
+  container:{
+      padding:24
+  }
+})
