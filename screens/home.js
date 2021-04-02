@@ -1,20 +1,11 @@
 import React, { useState } from 'react';
 import {StyleSheet,View,Text} from 'react-native'
-
+import {globalStyles} from '../styles/global';
 export default function Home(){
     
         return (
-          <View style={styles.container}><Text style={styles.text}>Home Screen</Text></View>
+          <View style={globalStyles.container}><Text style={globalStyles.text}>Home Screen</Text></View>
         );
     
 }
 
-const styles=StyleSheet.create({
-    container:{
-        padding:24
-    },
-    text:{
-        fontFamily:'raleway-variable',
-        fontWeight:'bold'
-    }
-})
