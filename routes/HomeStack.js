@@ -7,10 +7,16 @@ const Stack=createStackNavigator();
 
 export default Navigator=()=>(
     <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+        screenOptions={{
+            headerStyle:{backgroundColor:"#eee",height:90},
+            headerTintColor:'#444'
+        }}
+        >
         
-        <Stack.Screen name='Home' component={Home} options={{title:""}}/>
-        <Stack.Screen name='ReviewDetails' component={ReviewDetails} options={{title:""}}/>
+        {/* Instead of defining options for every screen which is same lets keep it default */}
+        <Stack.Screen name='Home' component={Home} options={{title:"ReviewXoop"}}/>
+        <Stack.Screen name='ReviewDetails' component={ReviewDetails} options={{title:"Reviews"}}/>
 
         </Stack.Navigator>
         
