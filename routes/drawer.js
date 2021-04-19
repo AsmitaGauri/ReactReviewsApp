@@ -3,10 +3,10 @@ import {createDrawerNavigator} from '@react-navigation/drawer'
 import {NavigationContainer} from '@react-navigation/native'
 import HomeStack from './HomeStack';
 import AboutStack from './aboutStack';
-
 const Stack=createDrawerNavigator();
 
-export default Navigator=()=>(
+export default function Navigator(){
+    return(
     <NavigationContainer>
 
   
@@ -16,4 +16,4 @@ export default Navigator=()=>(
 
     </Stack.Navigator>
     </NavigationContainer>
-);
+)};
