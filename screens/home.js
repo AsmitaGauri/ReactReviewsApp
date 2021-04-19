@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {StyleSheet,View,Text, FlatList} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import {globalStyles} from '../styles/global';
-
+import Card from '../shared/card'
 // screens defined in HomeStack are automatically provided with navigation props
 export default function Home({navigation}){
 
@@ -19,7 +19,10 @@ export default function Home({navigation}){
             data={reviews}
             renderItem={({item})=>(
               <TouchableOpacity onPress={()=>navigation.navigate('ReviewDetails',item)}>
-                <Text style={globalStyles.text}>{item.title}</Text>
+                <Card>
+                  <Text style={globalStyles.text}>{item.title}</Text>
+                </Card>
+                
               </TouchableOpacity>
             )}
             />
