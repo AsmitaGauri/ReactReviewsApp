@@ -22,6 +22,11 @@ export const globalStyles=StyleSheet.create({
         fontSize: 18,
         borderRadius: 10,
         marginBottom:10
+    },
+    error: {
+        color: 'crimson',
+        fontWeight: 'bold',
+        marginBottom:5,
     }
 })
 
