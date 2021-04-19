@@ -5,7 +5,7 @@ import Home from './screens/home';
 import {StyleSheet} from 'react-native'
 import AppLoading from 'expo-app-loading'
 import * as Font from 'expo-font'
-import Navigator from './routes/HomeStack'
+import Navigator from './routes/drawer'
 const getFonts=()=>{
     return Font.loadAsync({
         'raleway-variable':require('./assets/fonts/Raleway-VariableFont_wght.ttf'),

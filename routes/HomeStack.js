@@ -5,8 +5,9 @@ import Home from '../screens/home';
 import ReviewDetails from '../screens/reviewDetails';
 const Stack=createStackNavigator();
 
-export default Navigator=()=>(
-    <NavigationContainer>
+export default HomeStack=()=>(
+
+        
         <Stack.Navigator
         screenOptions={{
             headerStyle:{backgroundColor:"#eee",height:90},
@@ -20,5 +21,5 @@ export default Navigator=()=>(
 
         </Stack.Navigator>
         
-    </NavigationContainer>
+    
 )
